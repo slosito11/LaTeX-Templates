@@ -1,0 +1,197 @@
+% !TEX TS-program = pdflatex
+% !TEX encoding = UTF-8 Unicode
+
+% This file is a template using the "beamer" package to create slides for a talk or presentation
+% - Giving a talk on some subject.
+% - The talk is between 15min and 45min long.
+% - Style is ornate.
+
+% MODIFIED by Jonathan Kew, 2008-07-06
+% The header comments and encoding in this file were modified for inclusion with TeXworks.
+% The content is otherwise unchanged from the original distributed with the beamer package.
+
+\documentclass{beamer}
+
+
+% Copyright 2004 by Till Tantau <tantau@users.sourceforge.net>.
+%
+% In principle, this file can be redistributed and/or modified under
+% the terms of the GNU Public License, version 2.
+%
+% However, this file is supposed to be a template to be modified
+% for your own needs. For this reason, if you use this file as a
+% template and not specifically distribute it as part of a another
+% package/program, I grant the extra permission to freely copy and
+% modify this file as you see fit and even to delete this copyright
+% notice. 
+\usepackage{xcolor}
+
+\mode<presentation>
+{
+	\usetheme{Frankfurt}
+	% or ...
+	
+	\definecolor{UBCblue}{HTML}{318063} % UBC Blue (primary)
+	\definecolor{UBCgrey}{HTML}{1a2e2c} % UBC Grey (secondary)
+	
+	\setbeamercolor{palette primary}{bg=UBCblue,fg=white}
+	\setbeamercolor{palette secondary}{bg=UBCgrey,fg=white}
+	\setbeamercolor{palette tertiary}{bg=UBCgrey,fg=white}
+	\setbeamercolor{palette quaternary}{bg=UBCgrey,fg=white}
+	\setbeamercolor{structure}{fg=UBCblue} % itemize, enumerate, etc
+	\setbeamercolor{section in toc}{fg=UBCgrey} % TOC sections
+	
+	% Override palette coloring with secondary
+	\setbeamercolor{subsection in head/foot}{bg=UBCgrey,fg=white}
+	
+	
+	\setbeamercovered{transparent}
+	% or whatever (possibly just delete it)
+}
+
+
+\usepackage[english]{babel}
+% or whatever
+
+\usepackage[utf8]{inputenc}
+% or whatever
+
+\usepackage{times}
+\usepackage[T1]{fontenc}
+% Or whatever. Note that the encoding and the font should match. If T1
+% does not look nice, try deleting the line with the fontenc.
+
+
+%%% Stefano's packages:
+\usepackage{datetime}
+	\newdate{date}{13}{04}{2022}
+
+\usepackage{subcaption}	
+\usepackage{hyperref}
+\usepackage{cleveref}	
+\usepackage{animate}
+	
+%%%not Stefano's workaround
+	
+\let\chyperref\cref % Save the orginal command under a new name
+\renewcommand{\cref}[1]{\hyperlink{#1}{\chyperref{#1}}} % Redefine the \cref command and explictely add the hyperlink. 
+	
+	
+	
+	
+%%%	
+
+\title% (optional, use only with long paper titles)
+{Oral M4}
+
+\subtitle
+{Moment of inertia} % (optional)
+
+\author[Losito Stefano] % (optional, use only with lots of authors)
+{S.~Losito\inst{1}}% \and S.~Another\inst{2}}
+% - Use the \inst{?} command only if the authors have different
+%   affiliation.
+
+\institute[University of Geneva] % (optional, but mostly needed)
+{
+	\inst{1}%
+	Student BA. Physics\\
+	University of Geneva}
+%	\and
+%	\inst{2}%
+%	Department of Theoretical Philosophy\\
+%	University of Elsewhere}
+% - Use the \inst command only if there are several affiliations.
+% - Keep it simple, no one is interested in your street address.
+
+\date[Oral] % (optional)
+{\displaydate{date} / Oral}
+
+\subject{Talks}
+% This is only inserted into the PDF information catalog. Can be left
+% out. 
+
+\graphicspath{{imagini/}}
+
+\logo{\includegraphics[height=1cm]{logo}}
+
+% If you have a file called "university-logo-filename.xxx", where xxx
+% is a graphic format that can be processed by latex or pdflatex,
+% resp., then you can add a logo as follows:
+
+% \pgfdeclareimage[height=0.5cm]{university-logo}{university-logo-filename}
+% \logo{\pgfuseimage{university-logo}}
+
+
+
+% Delete this, if you do not want the table of contents to pop up at
+% the beginning of each subsection:
+\AtBeginSubsection[]
+{
+	\begin{frame}{Table of Contents}
+		\tableofcontents[currentsection,currentsubsection]
+	\end{frame}
+}
+
+
+% If you wish to uncover everything in a step-wise fashion, uncomment
+% the following command: 
+
+%\beamerdefaultoverlayspecification{<+->}
+
+
+\begin{document}
+	\sloppy
+	\begin{frame}
+		\titlepage
+	\end{frame}
+	
+%	\begin{frame}{Outline}
+%		\tableofcontents[pausesections]
+%		% You might wish to add the option 
+%	\end{frame}
+	
+	
+	% Since this a solution template for a generic talk, very little can
+	% be said about how it should be structured. However, the talk length
+	% of between 15min and 45min and the theme suggest that you stick to
+	% the following rules:  
+	
+	% - Exactly two or three sections (other than the summary).
+	% - At *most* three subsections per section.
+	% - Talk about 30s to 2min per frame. So there should be between about
+	%   15 and 30 frames, all told.
+	
+	
+		\begin{frame}{Introduction}
+		The purpose of this experience is to study the moment of inertia, through periodical rotation.
+	\end{frame}
+	
+%	\begin{frame}{Summary}
+%		
+%		\tableofcontents
+%	\end{frame}
+	
+\section{Theory}
+
+
+
+\appendix
+	\begin{frame}{Conclusion \&\& Questions}
+		\begin{itemize}
+			\item Applications(G.R., Gyroscope,...)
+		\end{itemize}
+	\end{frame}
+
+\begin{frame}{Error propagation}
+	\begin{align*}
+		&\resizebox{.9\hsize}{!}{$\Delta I=\sqrt{\bigg(\frac{\Delta I_c\cdot T^2}{T'^2-T^2}\bigg)^2+\bigg(\frac{-I_c\cdot T^2}{\big(T'^2-T^2\big)^2}\ 2\cdot T'\cdot\Delta T'\bigg)^2+\bigg(\frac{2\cdot I_c\cdot T\cdot \Delta T}{T'^2-T^2}+\frac{I_c\cdot T^2}{\big(T'^2-T^2\big)^2}\ 2\cdot T\cdot\Delta T\bigg)^2}$}\\
+		&\resizebox{.8\hsize}{!}{$\Delta D=\sqrt{\bigg(\frac{8\pi^2\Delta I_c}{T'^2-T^2}\bigg)^2+ \bigg(\frac{-4\pi^2I_c}{\big(T'^2-T^2\big)^2}\ 2\cdot T'\cdot\Delta T'\bigg)^2+\frac{4\pi^2I_c}{\big(T'^2-T^2\big)^2}\ 2\cdot T\cdot\Delta T\bigg)^2}$}\\
+		&\resizebox{.45\hsize}{!}{$\Delta I_{exp}=\sqrt{\bigg(\frac{2T\Delta T\cdot D}{4\pi^2}\bigg)^2+\bigg(\frac{T^2\cdot \Delta D}{4\pi^2}\bigg)^2}$}\\
+		&\resizebox{.55\hsize}{!}{$\Delta I_{th}=\sqrt{\bigg(\frac{2}{5}\ \Delta M\cdot R^2\bigg)^2+\bigg(\frac{2}{5}\ M\cdot 2R\Delta R\bigg)^2}$}
+	\end{align*}
+\end{frame}
+\end{document}
+
+
+
