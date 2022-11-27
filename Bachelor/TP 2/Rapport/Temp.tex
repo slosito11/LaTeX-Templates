@@ -49,7 +49,7 @@
 \WarningFilter[temp]{latex}{Command} % silence the warning
 \usepackage{sectsty}
 \DeactivateWarningFilters[temp] % So nothing unrelated gets silenced
-\allsectionsfont{\mdseries} % (See the fntguide.pdf for font help)
+%\allsectionsfont{\mdseries} % (See the fntguide.pdf for font help)
 % (This matches ConTeXt defaults)
 
 %%% ToC (table of contents) APPEARANCE
@@ -60,27 +60,24 @@
 \setcounter{lofdepth}{2}
 
 %%%packages aggiunti da Stefano Losito
-\usepackage[
-style=phys,backend=biber,%
-articletitle=false,biblabel=brackets,%
-chaptertitle=false,pageranges=false%
-]
+\usepackage[style=phys, backend=biber]
 {biblatex}
 
 
 
 \usepackage{amssymb}  
-\usepackage{xcolor, soul}
+\usepackage[x11names]{xcolor}
 \newcommand{\hlc}[2][yellow]{ {\sethlcolor{#1} \hl{#2}} }
 
 
 \DeclareCaptionFont{lightgray}{\color{lightgray}}
 \captionsetup{format=hang,justification={justified},labelfont={color=black,footnotesize},textfont={color=black,footnotesize},list=true}
-\captionsetup[sub]{list=true}
+%\captionsetup[sub]{list=true}
 
-\usepackage{enumitem}
-\usepackage{amsmath}
+\usepackage{enumitem, soul}
+\usepackage{physics,amsmath}
 \usepackage{mathrsfs}
+\usepackage{cancel}
 \usepackage{scalerel}
 \usepackage{ upgreek }
 \usepackage{mathtools}
@@ -91,11 +88,11 @@ chaptertitle=false,pageranges=false%
 \usepackage{tikz} 
 \usepackage{pgfplots}
 \usepackage{ gensymb }
-\pgfplotsset{compat=1.11}
+\pgfplotsset{compat=1.18}
 
-\usepackage{mfirstuc}
-\usepackage[acronym,nomain]{glossaries}
-
+%\usepackage{mfirstuc}
+%\usepackage{siunitx}
+\usepackage[acronym,xindy={codepage=utf8}]{glossaries-extra}
 
 \usepackage{titling}
 \usepackage{appendix}
@@ -117,32 +114,39 @@ chaptertitle=false,pageranges=false%
 %\usepackage{mathtools}  
 %\mathtoolsset{showonlyrefs} 
 
+\usepackage{xfp}
+\usepackage{standalone}
+\usepackage{import}
+
 %\usepackage[scaled]{helvet}
 %\renewcommand\familydefault{\sfdefault} 
-\usepackage[T1]{fontenc}
-\usepackage{MnSymbol}
+%\usepackage[T1]{fontenc}
+%\usepackage{MnSymbol}
 
 \pdfinclusionerrorlevel=1
 \pdfminorversion=7
 \pdfsuppresswarningpagegroup=1
 
-\newcommand{\titlee}{Diffraction and Holography}% Intitulé du laboratoire
-\newcommand{\datered}{\today} % date de reddition
-\newcommand{\dated}{{\DTMsetstyle{ddmmyyyy}\DTMdisplaydate{2022}{10}{17}{0}}} % du dd.mm.aa
-\newcommand{\datef}{{\DTMsetstyle{ddmmyyyy}\DTMdisplaydate{2022}{10}{28}{4}}} % au dd.mm.aa 
-\newcommand{\nome}{Losito Stefano} % Votre prénom
-\newcommand{\nlabo}{2} % Numéro du laboratoire
-\newcommand{\assistant}{Multian Volodymyr} % Nom et prénom de l'assistant
+\newcommand{\titlee}{Cavendish \& Relativity}% Title
+\newcommand{\datered}{\today} % date of submission
+\newcommand{\dated}{{\DTMsetstyle{ddmmyyyy}\DTMdisplaydate{2022}{14}{11}{0}}} % du dd.mm.aa
+\newcommand{\datef}{{\DTMsetstyle{ddmmyyyy}\DTMdisplaydate{2022}{25}{11}{4}}} % au dd.mm.aa 
+\newcommand{\nome}{Losito Stefano} % Name 
+\newcommand{\nlabo}{4} % nb Laboratory
+\newcommand{\assistant}{Algren Malte} % Name assistant
 \newcommand{\groupe}{S} % Groupe (A-Z)
 
+\newcommand{\tqte}[1]{\textquotedblleft #1 \textquotedblright}
 
 \renewcommand{\labelitemi}{--}
 \newcommand{\ac}[1]{\acrshort{#1}}
+%\newcommand{}[]{}
 
 \makenoidxglossaries
 
 
 \hypersetup{
+	pdfencoding=auto,
 	colorlinks=false,
 	filecolor=magenta,
 	urlcolor=blue,
@@ -169,10 +173,14 @@ chaptertitle=false,pageranges=false%
 %%% END Article customizations
 
 
+\newacronym{sc}{SC}{semiconductors}
 
-\newacronym{do}{DO}{diffraction's opening}
-\newacronym{co}{CH}{circular hole}
-\newacronym{pt}{PD}{photo-diode}
+\newglossaryentry{het}
+{
+name={Ettingshausen's effect},
+description={is the resistance due to the heat caused by the accumulation of electrons caused by \gls{he}}
+}
+
 
 
 %%% The "real" document content comes below...
@@ -207,15 +215,31 @@ chaptertitle=false,pageranges=false%
 	\newpage
 	\pagenumbering{arabic}
 \tableofcontents
+
+\listoffigures
+
 \pagebreak
 
 \section{Introduction}
 
+\subsection{Purpose}
+
+\subsection{Experiments}
+
+\subsection{About \titlee}
+
 \section{Theory}
 
-\section{Methods}
 
 \section{Results \& discussion}
+
+\subsection{Result Summary and errors discussion}
+
+\subsection*{Important results}
+
+\subsection*{Errors}
+
+The errors were calculated via the propagation error, see \cref{err}.
 
 \section{Conclusion}
 
@@ -226,8 +250,6 @@ In conclusion,
 %\printendnotes
 \printbibliography[heading=bibintoc]
 \printnoidxglossaries
-\listoffigures
-
 
 \label{last page}
 
@@ -242,21 +264,11 @@ In conclusion,
 \pagenumbering{roman}
 
 \begin{appendices}
-	\section{Errors}
+	\section{Errors}\label{err}
 	The errors are calculated via propagation error formula:
 	\begin{equation*}
 		 \Delta X=\sqrt{\sum_{i}\Bigg(\frac{\partial X}{\partial X_i}\Delta X_i\Bigg)^2} 
 	\end{equation*}
-
-	\subsection{Photo-transistor speed}
-
-	We have:
-
-	\begin{equation*}
-		\Delta v=\sqrt{\Bigg(\frac{\Delta x}{t}\Bigg)^2+\Bigg(\frac{x\Delta t}{t^2}\Bigg)^2} 
-   \end{equation*}
-
-   With $x=0,1\pm0,02[m]$ and $t=210\pm0,001[s]$
 \end{appendices}
 
 \end{document}
