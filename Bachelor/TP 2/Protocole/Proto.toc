@@ -1,0 +1,8 @@
+\babel@toc {french}{}\relax 
+\contentsline {section}{\numberline {1}Introduction}{2}{section.1}%
+\contentsline {subsection}{\numberline {1.1}But}{2}{subsection.1.1}%
+\contentsline {subsection}{\numberline {1.2}À propos de \color {red}Titre titre}{2}{subsection.1.2}%
+\contentsline {section}{\numberline {2}Théorie}{3}{section.2}%
+\contentsline {section}{\numberline {3}Expériences}{3}{section.3}%
+\contentsline {section}{\numberline {4}Discussions}{5}{section.4}%
+\contentsline {section}{R\'ef\'erences}{5}{section*.5}%

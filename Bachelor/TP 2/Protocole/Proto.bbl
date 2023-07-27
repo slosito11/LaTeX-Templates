@@ -1,0 +1,137 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.2 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{none/global//global/global}
+    \entry{cours-elec}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=06ffddc6f630508a8a67f35ae488cbe8}{%
+           family={Golling},
+           familyi={G\bibinitperiod},
+           given={Tobias},
+           giveni={T\bibinitperiod}}}%
+      }
+      \strng{namehash}{06ffddc6f630508a8a67f35ae488cbe8}
+      \strng{fullhash}{06ffddc6f630508a8a67f35ae488cbe8}
+      \strng{bibnamehash}{06ffddc6f630508a8a67f35ae488cbe8}
+      \strng{authorbibnamehash}{06ffddc6f630508a8a67f35ae488cbe8}
+      \strng{authornamehash}{06ffddc6f630508a8a67f35ae488cbe8}
+      \strng{authorfullhash}{06ffddc6f630508a8a67f35ae488cbe8}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Electrodynamique 1}
+      \field{year}{2022}
+      \true{nocite}
+    \endentry
+    \entry{diff}{inreference}{}
+      \true{moreauthor}
+      \true{morelabelname}
+      \name{author}{2}{}{%
+        {{hash=5438654912e1bc4d80e18d9827a30183}{%
+           family={Lai},
+           familyi={L\bibinitperiod},
+           given={{D.K.}},
+           giveni={D\bibinitperiod}}}%
+        {{hash=603d827cf17bd710f3ead7849cb4e343}{%
+           family={Multian},
+           familyi={M\bibinitperiod},
+           given={Volodymyr},
+           giveni={V\bibinitperiod}}}%
+      }
+      \strng{namehash}{125c7f6f1393cfddcd8b7f4b10b66c36}
+      \strng{fullhash}{125c7f6f1393cfddcd8b7f4b10b66c36}
+      \strng{bibnamehash}{125c7f6f1393cfddcd8b7f4b10b66c36}
+      \strng{authorbibnamehash}{125c7f6f1393cfddcd8b7f4b10b66c36}
+      \strng{authornamehash}{125c7f6f1393cfddcd8b7f4b10b66c36}
+      \strng{authorfullhash}{125c7f6f1393cfddcd8b7f4b10b66c36}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Diffraction et Holographie}
+      \field{year}{1985-2022}
+      \true{nocite}
+    \endentry
+    \entry{Huyg-Fres}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=b6aea1a416c89509a7df1cbb69249cb6}{%
+           family={{Wikipedia contributors}},
+           familyi={W\bibinitperiod}}}%
+      }
+      \strng{namehash}{b6aea1a416c89509a7df1cbb69249cb6}
+      \strng{fullhash}{b6aea1a416c89509a7df1cbb69249cb6}
+      \strng{bibnamehash}{b6aea1a416c89509a7df1cbb69249cb6}
+      \strng{authorbibnamehash}{b6aea1a416c89509a7df1cbb69249cb6}
+      \strng{authornamehash}{b6aea1a416c89509a7df1cbb69249cb6}
+      \strng{authorfullhash}{b6aea1a416c89509a7df1cbb69249cb6}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{[Online; accessed 5-November-2022]}
+      \field{title}{Huygens-Fresnel principle --- {Wikipedia}{,} The Free Encyclopedia}
+      \field{year}{2022}
+      \true{nocite}
+      \verb{urlraw}
+      \verb {https://en.wikipedia.org/w/index.php?title=Huygens%E2%80%93Fresnel_principle&oldid=1097518977}
+      \endverb
+      \verb{url}
+      \verb %7Bhttps://en.wikipedia.org/w/index.php?title=Huygens%E2%80%93Fresnel_principle&oldid=1097518977%7D
+      \endverb
+    \endentry
+    \entry{Menon12a}{article}{}
+      \name{author}{1}{}{%
+        {{hash=0e3234b1d03833182bd81a74115f489d}{%
+           family={Menon},
+           familyi={M\bibinitperiod},
+           given={Ravi\bibnamedelima S.},
+           giveni={R\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
+      }
+      \strng{namehash}{0e3234b1d03833182bd81a74115f489d}
+      \strng{fullhash}{0e3234b1d03833182bd81a74115f489d}
+      \strng{bibnamehash}{0e3234b1d03833182bd81a74115f489d}
+      \strng{authorbibnamehash}{0e3234b1d03833182bd81a74115f489d}
+      \strng{authornamehash}{0e3234b1d03833182bd81a74115f489d}
+      \strng{authorfullhash}{0e3234b1d03833182bd81a74115f489d}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{NeuroImage}
+      \field{number}{2}
+      \field{title}{Mental chronometry.}
+      \field{volume}{62}
+      \field{year}{2012}
+      \true{nocite}
+      \field{pages}{1068\bibrangedash 1071}
+      \range{pages}{4}
+      \verb{urlraw}
+      \verb http://dblp.uni-trier.de/db/journals/neuroimage/neuroimage62.html#Menon12a
+      \endverb
+      \verb{url}
+      \verb http://dblp.uni-trier.de/db/journals/neuroimage/neuroimage62.html#Menon12a
+      \endverb
+      \keyw{dblp}
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+
